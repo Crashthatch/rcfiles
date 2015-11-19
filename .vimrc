@@ -32,8 +32,8 @@ set number
 
 " Do not use tabs- use spaces to indent.
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 " highlight all matches when searching
 set hlsearch
