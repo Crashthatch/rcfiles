@@ -11,9 +11,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -27,7 +24,8 @@ set background=dark
 "let g:solarized_termcolors=256
 colorscheme solarized "monokai
 
-" line numbers
+" line numbers (Still required when using relativenumber so that the current
+" line doesn't show up as 0)
 set number
 
 " Do not use tabs- use spaces to indent.
@@ -94,3 +92,23 @@ Plugin 'tpope/vim-surround'
 Bundle "ternjs/tern_for_vim"
 let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
+
+"Relative line numbers when moving around.
+set relativenumber
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+"When vi doesn't have focus, show line numbers as we're not moving about!
+"(Doesn't affect command-line vim).
+:au FocusLost * :set norelativenumber
+:au FocusGained * :set relativenumber
+"Use regular line numbers when we're in insert mode (as we can't do stuff to
+"multiple lines.
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
