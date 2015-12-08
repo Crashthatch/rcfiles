@@ -112,3 +112,9 @@ nnoremap <C-n> :call NumberToggle()<cr>
 "multiple lines.
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
+
+"Show changed lines according to git.
+Plugin 'airblade/vim-gitgutter'
+
+"VIM-wide var, but most noticable on the git plugin.
+set updatetime=250
