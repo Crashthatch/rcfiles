@@ -117,4 +117,4 @@ autocmd InsertLeave * :set relativenumber
 Plugin 'airblade/vim-gitgutter'
 
 "VIM-wide var, but most noticable on the git plugin.
-set updatetime=250
+set updatetime=1000

@@ -114,3 +114,12 @@ if ! shopt -oq posix; then
 fi
 ANDROID_HOME=~/android-sdk-linux
 PATH=$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/tom/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/tom/google-cloud-sdk/completion.bash.inc'
+
+#Enable Ctrl-S to search through command history forwards (Ctrl-R goes backwards, but this line isn't needed for that).
+stty -ixon
