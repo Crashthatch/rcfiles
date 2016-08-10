@@ -9,6 +9,9 @@ git clone https://github.com/altercation/vim-colors-solarized
 mv vim-colors-solarized/colors/solarized.vim .
 rm -rf vim-colors-solarized
 
+#Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 #Install Vundle plugins
 vim +PluginInstall +qall
 
