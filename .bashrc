@@ -136,3 +136,15 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_HIDE_IF_PWD_IGNORED=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
+
+#Alias common git commands
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add -A'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gp='git pull'
+alias gst='git status'
+alias gsta='git status'

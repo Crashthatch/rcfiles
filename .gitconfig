@@ -1,0 +1,7 @@
+[user]
+	email = fletcher.tom@gmail.com
+	name = Tom Fletcher
+[core]
+	autocrlf = input
+[push]
+	default = simple
