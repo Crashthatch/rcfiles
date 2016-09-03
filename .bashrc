@@ -123,3 +123,15 @@ source '/home/tom/google-cloud-sdk/completion.bash.inc'
 
 #Enable Ctrl-S to search through command history forwards (Ctrl-R goes backwards, but this line isn't needed for that).
 stty -ixon
+
+export NVM_DIR="/home/tom/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#Git prompt
+source ~/git-prompt.sh
+PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_HIDE_IF_PWD_IGNORED=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
