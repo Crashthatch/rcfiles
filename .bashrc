@@ -130,7 +130,7 @@ export NVM_DIR="/home/tom/.nvm"
 #Git prompt
 source ~/git-prompt.sh
 #PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
-PROMPT_COMMAND='__git_ps1 "\u:\w" "\\\$ "'
+PROMPT_COMMAND='__git_ps1 "\u:\w" " \j\\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
