@@ -148,3 +148,8 @@ alias gcom='git checkout master'
 alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
+
+#Set up pyenv.
+export PATH="/home/tom/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
