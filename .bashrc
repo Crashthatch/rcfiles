@@ -149,6 +149,15 @@ alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
 
+#Alias docker commands - Now with tab-completion!
+alias dk='docker ps -lq | xargs docker stop -t 1'
+
+function de(){
+  docker exec -ti $1 sh
+}
+complete -F _docker_exec de
+
+
 #Set up pyenv.
 export PATH="/home/tom/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
