@@ -149,6 +149,10 @@ alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
 
+# Add git completion to aliases
+__git_complete gco _git_checkout
+__git_complete gp _git_pull
+
 #Alias docker commands - Now with tab-completion!
 alias dk='docker ps -lq | xargs docker stop -t 1'
 
