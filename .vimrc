@@ -21,7 +21,7 @@ Plugin 'altercation/solarized'
 set t_Co=256
 syntax on
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 colorscheme solarized "monokai
 
 " line numbers (Still required when using relativenumber so that the current
