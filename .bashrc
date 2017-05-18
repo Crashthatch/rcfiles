@@ -170,17 +170,19 @@ function deb(){
 }
 complete -F _docker_exec deb
 
-#Alias common git commands
-alias ga='git add'
-alias gaa='git add .'
-alias gaaa='git add -A'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gco='git checkout'
-alias gcom='git checkout master'
-alias gp='git pull'
-alias gst='git status'
-alias gsta='git status'
+#Alias common misspellings
+alias sl=ls
+alias tig=git
+alias gti=git
+alias tgi=git
+alias igt=git
+alias itg=git
+alias dockre=docker
+alias dicker=docker
+alias docekr=docker
+alias dcker=docker
+alias dokcer=docker
+
 
 #Set up pyenv.
 export PATH="/home/tom/.pyenv/bin:$PATH"
