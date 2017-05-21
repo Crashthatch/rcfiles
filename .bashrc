@@ -138,6 +138,7 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
 #Alias common git commands
+alias g='git'
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add -A'
