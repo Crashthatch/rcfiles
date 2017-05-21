@@ -3,9 +3,13 @@
 	name = Tom Fletcher
 [core]
 	autocrlf = input
+	editor = vim
+	
 [push]
 	default = simple
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[help]
+	autocorrect = 1
