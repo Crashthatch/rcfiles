@@ -15,6 +15,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #Install Vundle plugins
 vim +PluginInstall +qall
 
-echo 'Now your terminal to use solarized colours.
+echo 'Now set your terminal to use solarized colours.
 For Mac Terminal, open a terminal, choose "Preferences", and import the profile from here: https://github.com/altercation/solarized/blob/master/osx-terminal.app-colors-solarized/Solarized%20Dark%20ansi.terminal'
 

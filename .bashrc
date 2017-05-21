@@ -116,10 +116,16 @@ ANDROID_HOME=~/android-sdk-linux
 PATH=$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/tom/google-cloud-sdk/path.bash.inc'
+if [ -f ~/google-cloud-sdk/path.bash.inc ]
+then
+  source '~/google-cloud-sdk/path.bash.inc'
+fi
 
 # The next line enables shell command completion for gcloud.
-source '/home/tom/google-cloud-sdk/completion.bash.inc'
+if [ -f ~/google-cloud-sdk/completion.bash.inc ]
+then
+  source '~/google-cloud-sdk/completion.bash.inc'
+fi
 
 #Enable Ctrl-S to search through command history forwards (Ctrl-R goes backwards, but this line isn't needed for that).
 stty -ixon
@@ -128,9 +134,9 @@ export NVM_DIR="/home/tom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #Git prompt
-source ~/git-prompt.sh
+source ~/rcfiles/git-prompt.sh
 #PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
-PROMPT_COMMAND='__git_ps1 "\u:\w" " \j\\\$ "'
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \j\\\$ "'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
@@ -151,14 +157,16 @@ alias gst='git status'
 alias gsta='git status'
 
 # Add git completion to aliases
-if [ -f ~/git-completion.bash ]; then
-  . ~/git-completion.bash
+if [ -f ~/rcfiles/git-completion.bash ]; then
+  . ~/rcfiles/git-completion.bash
   
   __git_complete gco _git_checkout
   __git_complete gp _git_pull
+  __git_complete g __git_main
 fi
 
 #Alias docker commands - Now with tab-completion!
+alias d='docker'
 alias dk='docker ps -lq | xargs docker stop -t 1'
 
 function de(){
@@ -186,6 +194,9 @@ alias dokcer=docker
 
 
 #Set up pyenv.
-export PATH="/home/tom/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if [ -d ~/.pyenv ]
+then
+  export PATH="~/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
