@@ -151,5 +151,6 @@ alias gsta='git status'
 
 #Set up pyenv.
 export PATH="/home/tom/.pyenv/bin:$PATH"
+export PYTHONPATH="${PYTHONPATH}:."
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
