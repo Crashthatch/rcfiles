@@ -116,15 +116,15 @@ ANDROID_HOME=~/android-sdk-linux
 PATH=$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f ~/google-cloud-sdk/path.bash.inc ]
+if [ -f $HOME/google-cloud-sdk/path.bash.inc ]
 then
-  source '~/google-cloud-sdk/path.bash.inc'
+  source $HOME'/google-cloud-sdk/path.bash.inc'
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f ~/google-cloud-sdk/completion.bash.inc ]
+if [ -f $HOME/google-cloud-sdk/completion.bash.inc ]
 then
-  source '~/google-cloud-sdk/completion.bash.inc'
+  source $HOME'/google-cloud-sdk/completion.bash.inc'
 fi
 
 #Enable Ctrl-S to search through command history forwards (Ctrl-R goes backwards, but this line isn't needed for that).
