@@ -201,3 +201,6 @@ then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
+#Add completion to the aws-commands:
+complete -C '/usr/local/bin/aws_completer' aws
