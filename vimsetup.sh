@@ -19,5 +19,6 @@ vim +PluginInstall +qall
 ~/.vim/bundle/YouCompleteMe/install.py
 
 echo 'Now set your terminal to use solarized colours.
-For Mac Terminal, open a terminal, choose "Preferences", and import the profile from here: https://github.com/altercation/solarized/blob/master/osx-terminal.app-colors-solarized/Solarized%20Dark%20ansi.terminal'
+For Mac Terminal, open a terminal, choose "Preferences", and import the profile from here: https://github.com/altercation/solarized/blob/master/osx-terminal.app-colors-solarized/Solarized%20Dark%20ansi.terminal
+On Ubuntu, choose terminal, preferences, profiles, edit, colours, and choose "solarized dark".'
 
