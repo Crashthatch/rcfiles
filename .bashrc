@@ -112,6 +112,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Default cli editor:
+export EDITOR=/bin/vim
+
 ANDROID_HOME=~/android-sdk-linux
 PATH=$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools
 
@@ -155,6 +159,7 @@ alias gcom='git checkout master'
 alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
+alias gd='git diff --word-diff'
 
 # Add git completion to aliases
 if [ -f ~/rcfiles/git-completion.bash ]; then
