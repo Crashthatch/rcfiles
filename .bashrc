@@ -159,7 +159,7 @@ alias gcom='git checkout master'
 alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
-alias gd='git diff --word-diff'
+alias gd='git diff --word-diff --function-context'
 
 # Add git completion to aliases
 if [ -f ~/rcfiles/git-completion.bash ]; then
