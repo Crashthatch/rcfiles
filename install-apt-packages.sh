@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y awscli vim htop iotop dnsutils git python-pip wget unzip mtr build-essential cmake python-dev python3-dev linux-tools-common linux-tools-generic
+sudo apt-get install -y awscli vim htop iotop iftop dnsutils git python-pip wget unzip mtr build-essential cmake python-dev python3-dev linux-tools-common linux-tools-generic
 
 sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
