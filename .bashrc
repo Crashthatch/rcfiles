@@ -147,6 +147,11 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_HIDE_IF_PWD_IGNORED=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
+#Alias git to hub (additional features!). Install from https://github.com/github/hub/issues/718#issuecomment-100411835
+if [ -x "$(command -v git)" ]; then
+  alias git='hub'
+fi
+
 #Alias common git commands
 alias g='git'
 alias ga='git add'
@@ -159,7 +164,7 @@ alias gcom='git checkout master'
 alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
-alias gd='git diff --function-context --minimal'
+alias gd='git diff --minimal'
 
 # Add git completion to aliases
 if [ -f ~/rcfiles/git-completion.bash ]; then
@@ -209,3 +214,4 @@ fi
 
 #Add completion to the aws-commands:
 complete -C '/usr/local/bin/aws_completer' aws
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

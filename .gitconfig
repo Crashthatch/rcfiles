@@ -7,13 +7,20 @@
 	
 [push]
 	default = simple
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [help]
 	autocorrect = 1
 [pager]
   log = perl ~/rcfiles/diff-highlight | less
   show = perl ~/rcfiles/diff-highlight | less
   diff = perl ~/rcfiles/diff-highlight | less
+
+[alias]
+  find-branch = "!f() { \
+    branch=$(git branch -a | grep -v remotes | grep $1 | head -n 1 | awk '{print $1}'); \
+    if [ -z $branch ]; then \
+      exit 127; \
+    else \
+      git checkout $branch; \
+    fi; \
+    }; \
+    f"
