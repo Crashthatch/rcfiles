@@ -16,7 +16,7 @@
 
 [alias]
   find-branch = "!f() { \
-    branch=$(git branch -a | grep -v remotes | grep $1 | head -n 1 | awk '{print $1}'); \
+    branch=$(git branch -a | grep -v remotes | grep $1 | head -n 1 | sed 's/^..//g'); \
     if [ -z $branch ]; then \
       exit 127; \
     else \
