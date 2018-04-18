@@ -1,6 +1,7 @@
 [user]
 	email = fletcher.tom@gmail.com
 	name = Tom Fletcher
+	signingkey = BDB078629D35F465
 [core]
 	autocrlf = input
 	editor = vim
@@ -24,3 +25,5 @@
     fi; \
     }; \
     f"
+[commit]
+	gpgsign = true
