@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This script will search the current branch name for JIRA tags like AB-12 or AB1234 and prepend the tag to the commit message.
+# To install to myrepo (assuming this rcfiles repo was checked out to ~/rcfiles):
+# ln -s ~/rcfiles/prepare-commit-message <myrepo>/.git/hooks/prepare-commit-message
+COMMIT_FILE=$1
+COMMIT_MSG=$(cat $1)
+COMMIT_MSG_SOURCE=$2
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+JIRA_ID=$(echo "$CURRENT_BRANCH" | grep -Eo "[A-Z]{2}-?[0-9]{2,4}")
+
+# Only prepend JIRA ID if doing "git commit" (source is empty), or the message comes from using "git commit -m"
+# (avoids adding the ID twice when using --amend).
+if [ ! -z "$JIRA_ID" ] && [ -z "$COMMIT_MSG_SOURCE" -o "$COMMIT_MSG_SOURCE" == "message" ]; then
+    echo "$JIRA_ID: $COMMIT_MSG" > $COMMIT_FILE
+    echo "JIRA ID '$JIRA_ID', matched in current branch name, prepended to commit message. (Use --no-verify to skip)"
+fi
