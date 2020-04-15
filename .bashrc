@@ -165,6 +165,7 @@ alias gp='git pull'
 alias gst='git status'
 alias gsta='git status'
 alias gd='git diff --minimal'
+alias gf='git fetch'
 
 # Add git completion to aliases
 if [ -f ~/rcfiles/git-completion.bash ]; then
